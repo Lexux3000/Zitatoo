@@ -24,11 +24,14 @@ node -v
 ```
 ### run
 ```bash
+
+cd ZitatooApp\src
+
 nvm use 22
 
 npm install
 
-node run dev
+npm run dev
 
 ```
 
