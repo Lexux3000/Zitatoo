@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box } from '@chakra-ui/react';
-import SmokeBackground from '../SmokeBackground/SmokeBackground';
-import DecorativeElements from '../DecorativeElements/DecorativeElements';
+import SmokeBackground from '../../SmokeBackground/SmokeBackground';
+import DecorativeElements from '../../DecorativeElements/DecorativeElements';
 import Footer from '../Footer/Footer';
 
 interface LayoutProps {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChakraProvider, createSystem, defaultConfig } from '@chakra-ui/react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
+import Layout from './components/DefaultComponents/Layout/Layout';
 import Home from './Pages/Home';
 //import Portfolio from './pages/Portfolio';
 //import Contact from './pages/Contact';
