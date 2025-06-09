@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { ChakraProvider, createSystem, defaultConfig } from '@chakra-ui/react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
 
-function App() {
-  const [count, setCount] = useState(0)
+// future imports, then add them as elements to routes
+//import Home from './pages/Home';
+//import Portfolio from './pages/Portfolio';
+//import Contact from './pages/Contact';
+//import About from './pages/About';
 
+const system = createSystem(defaultConfig);
+
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <ChakraProvider value={system}>
+      <Router>
+        <div className="App">
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/"/>
+              <Route path="/portfolio"/>
+              <Route path="/contact"/>
+              <Route path="/about" />
+            </Routes>
+          </main>
+        </div>
+      </Router>
+    </ChakraProvider>
+  );
+};
 
-export default App
+export default App;
